@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: distributed-transaction-with-two-pc
+  datasource:
+    url: jdbc:h2:mem:h2DataBase;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 123456
+  h2:
+    console:
+      enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 10002
+  servlet:
+    context-path: /distributed-transaction
